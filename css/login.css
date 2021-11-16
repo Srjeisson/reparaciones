@@ -1,0 +1,306 @@
+body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+}
+
+
+
+.header {
+  width: 100%;
+  background-color: #219ebc;
+  padding: 5px 0px;
+  
+  top: 0;
+  box-sizing: border-box;
+}
+
+.head-wrap {
+  box-sizing: border-box;
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+.menu-wrap {
+  display: flex;
+}
+
+.menu {
+  display: flex;
+}
+
+.list-menu {
+  padding: 0px 20px;
+  list-style: none;
+}
+
+.url-menu {
+  text-decoration: none;
+  font-size: 20px;
+  color: #fff;
+}
+
+.page-name {
+  font-size: 20px;
+}
+
+.name-url{
+  text-decoration: none;
+  color:#fff;
+}
+
+.log-in {
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.log-in:hover {
+  background-color: #fff;
+  color: #000;
+  border: #fff;
+  cursor: pointer;
+}
+
+#sidebar , .toggle-btn{
+  display: none;
+}
+
+
+/*------------------------------------------------------------*/
+
+.login{
+  background:linear-gradient(#219ebc, #023047) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 30px;
+  min-height: calc(100vh - 200px);
+}
+
+.login__container{
+  background-color:rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  padding: 60px 68px 40px;
+  min-height: 700px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.login__container--form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login__container--form label{
+  font-size: 14px;
+}
+
+.login__container--remember{
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.login__container--remember a{
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login__container--remember a:hover{
+  text-decoration: underline;
+}
+
+.login__container--social-media > div{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.login__container--social-media > div > img{
+  width: 30px;
+  margin-right: 10px;
+}
+
+.login__container--register{
+  font-size: 14px;
+}
+
+
+.login__container--register a {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+
+.input{
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  outline: navajowhite;
+  height: 50px;
+}
+
+::placeholder{
+  color: #fff;
+}
+
+.button{
+  border-radius: 25px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border:none;
+  cursor: pointer;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px ;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: #023047;
+  width: 100%;
+}
+
+
+
+.footer a {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+.footer a:hover{
+  text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px){
+  .login__container{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .footer{
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .menu,
+  .log-in {
+    display: none;
+  }
+  
+  .log-in {
+    margin-top: 20px;
+  }
+  
+  .page-name {
+    align-self: center;
+    padding-left: 0;
+  }
+  
+  
+  #sidebar {
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #219ebc;
+    left: -200px;
+    top: 70px;
+    transition: all 500ms linear;
+    
+  }
+  
+  #sidebar.active {
+    left: 0px;
+    
+  }
+  
+  #sidebar ul li {
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: start;
+    cursor: pointer;
+    align-self: center;
+    
+  }
+
+  #sidebar ul li:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #sidebar ul{
+    padding: 0;
+  }
+  
+
+  .toggle-btn {
+    cursor: pointer;
+    display: block;
+  }
+
+  span,
+  .toggle-btn {
+    display: block;
+    width: 30px;
+    text-align: center;
+    font-size: 30px;
+    align-self: center;
+  }
+  
+  .media-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu-wrap {
+    margin: 0;
+  }
+  
+  .header{
+    position: sticky;
+    top: 0;
+  }
+ 
+}
